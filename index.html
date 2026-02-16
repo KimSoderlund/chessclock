@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>ChessClock</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="clock-section flipped bottom-shadow" id="time1"></div>
+      <div class="middle-section">
+        <div id="pause">PAUSE</div>
+
+        <i id="settings" class="fa fa-gear fa-3x"></i>
+      </div>
+      <div class="clock-section top-shadow" id="time2"></div>
+
+      <div id="settings-menu">
+        <h2>Settings</h2>
+        <div class="settings-time">
+          <div>
+            <p>Hours</p>
+            <input id="newHour" type="number" min="0" />
+          </div>
+          <div>
+            <p>Minutes</p>
+            <input id="newMinute" type="number" min="0" />
+          </div>
+          <div>
+            <p>Seconds</p>
+            <input id="newSecond" type="number" min="0" />
+          </div>
+        </div>
+        <div class="settings-time">
+          <button id="change-time-btn">Change</button>
+          <button id="close-settings-btn">Close</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 105%;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+
+.clock-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e2e2e2;
+  flex-grow: 10;
+  font-size: large;
+  width: 100vw;
+  font-size: 400%;
+  user-select: none;
+}
+
+.flipped {
+  transform: rotate(180deg);
+}
+
+.bottom-shadow {
+  box-shadow: inset 0px 1px 16px rgba(0, 0, 0, 0.705);
+}
+
+.top-shadow {
+  box-shadow: inset 0px -1px 16px rgba(0, 0, 0, 0.705);
+}
+
+.player-1-active {
+  background-color: aqua;
+  cursor: pointer;
+}
+.player-2-active {
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+.middle-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #dcdcdc;
+  flex-grow: 2;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+  user-select: none;
+}
+
+.middle-section div {
+  font-size: large;
+  text-align: center;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#settings {
+  position: absolute;
+  right: 1rem;
+  display: none;
+  width: fit-content;
+  height: fit-content;
+  user-select: none;
+}
+
+#settings:hover {
+  cursor: pointer;
+}
+
+#settings.setting-button-active {
+  display: flex;
+}
+
+#settings-menu {
+  position: absolute;
+  z-index: 99999;
+  background-color: #dcdcdce8;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  padding: 6rem;
+}
+
+#settings-menu input {
+  width: 6rem;
+  height: 3rem;
+  font-size: medium;
+  text-align: center;
+}
+
+#settings-menu.settings-menu-active {
+  display: flex;
+}
+
+.settings-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#settings-menu button {
+  width: 6rem;
+  height: 3rem;
+  font-size: medium;
+  text-align: center;
+  margin-top: 1rem;
+  margin: 1rem;
+}
