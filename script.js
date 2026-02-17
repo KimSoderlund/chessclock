@@ -5,6 +5,9 @@ const player2Section = document.getElementById("time2");
 let player1 = { hour: 1, minute: 30, second: 0, pause: true };
 let player2 = { hour: 1, minute: 30, second: 0, pause: true };
 
+//Value for low time alert
+let lowTimeAlert = 30;
+
 //set innerHTML to the player objects
 player1Section.innerHTML =
   player1.hour + ":" + player1.minute + ":" + player1.second;
@@ -112,16 +115,18 @@ function renderering() {
   }
   if (
     player1Section.classList.contains("player-active") &&
-    player1.minute < 15 &&
+    player1.minute < lowTimeAlert &&
     player1.hour === 0
   ) {
     player1Section.classList.add("player-active-alert");
   } else {
     player1Section.classList.remove("player-active-alert");
   }
+
+  //Alert the player when they are running out of time
   if (
     player2Section.classList.contains("player-active") &&
-    player2.minute < 15 &&
+    player2.minute < lowTimeAlert &&
     player2.hour === 0
   ) {
     player2Section.classList.add("player-active-alert");
@@ -143,8 +148,12 @@ closeSettingsMenuButton.addEventListener("click", () => {
   settingsMenu.classList.remove("settings-menu-active");
 });
 
-//change time for players
+//Player Time and alert threshold changes
 const changeTimeButton = document.getElementById("change-time-btn");
+const lowTimeInput = document.getElementById("low-time-alert");
+
+lowTimeInput.value = lowTimeAlert;
+
 changeTimeButton.addEventListener("click", () => {
   let newHour = parseInt(document.getElementById("newHour").value);
   let newMinute = parseInt(document.getElementById("newMinute").value);
@@ -164,6 +173,7 @@ changeTimeButton.addEventListener("click", () => {
   player2.hour = newHour;
   player2.minute = newMinute;
   player2.second = newSecond;
+  lowTimeAlert = lowTimeInput.value;
 });
 
 renderering();

@@ -94,9 +94,8 @@
   width: 100vw;
   display: none;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
-  padding: 6rem;
 }
 
 #settings-menu input {
@@ -112,10 +111,20 @@
 
 .settings-time {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
+}
+.settings-time-input-field {
+  display: flex;
+  flex-direction: row;
+}
+.settings-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #settings-menu button {
@@ -123,6 +132,6 @@
   height: 3rem;
   font-size: medium;
   text-align: center;
-  margin-top: 1rem;
-  margin: 1rem;
+  margin: 5px;
+  cursor: pointer;
 }
