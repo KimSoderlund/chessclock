@@ -38,11 +38,11 @@
   box-shadow: inset 0px -1px 16px rgba(0, 0, 0, 0.705);
 }
 
-.player-1-active {
+.player-active {
   background-color: aqua;
   cursor: pointer;
 }
-.player-2-active {
+.player-active-alert {
   background-color: lightcoral;
   cursor: pointer;
 }

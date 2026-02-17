@@ -29,6 +29,7 @@ setInterval(() => {
     } else {
       return;
     }
+    renderering();
   }
   player1Section.innerHTML =
     player1.hour + ":" + player1.minute + ":" + player1.second;
@@ -52,6 +53,7 @@ setInterval(() => {
     } else {
       return;
     }
+    renderering();
   }
   player2Section.innerHTML =
     player2.hour + ":" + player2.minute + ":" + player2.second;
@@ -95,18 +97,34 @@ pauseButton.addEventListener("click", () => {
 const settingsMenuButton = document.getElementById("settings");
 function renderering() {
   if (player1.pause && player2.pause) {
-    player1Section.classList.remove("player-1-active");
-    player2Section.classList.remove("player-2-active");
+    player1Section.classList.remove("player-active");
+    player2Section.classList.remove("player-active");
     settingsMenuButton.classList.add("setting-button-active");
   }
   if (!player1.pause && player2.pause) {
-    player1Section.classList.add("player-1-active");
-    player2Section.classList.remove("player-2-active");
+    player1Section.classList.add("player-active");
+    player2Section.classList.remove("player-active");
     settingsMenuButton.classList.remove("setting-button-active");
   } else if (player1.pause && !player2.pause) {
-    player1Section.classList.remove("player-1-active");
-    player2Section.classList.add("player-2-active");
+    player1Section.classList.remove("player-active");
+    player2Section.classList.add("player-active");
     settingsMenuButton.classList.remove("setting-button-active");
+  }
+  if (
+    player1Section.classList.contains("player-active") &&
+    player1.minute < 15
+  ) {
+    player1Section.classList.add("player-active-alert");
+  } else {
+    player1Section.classList.remove("player-active-alert");
+  }
+  if (
+    player2Section.classList.contains("player-active") &&
+    player2.minute < 15
+  ) {
+    player2Section.classList.add("player-active-alert");
+  } else {
+    player2Section.classList.remove("player-active-alert");
   }
 }
 
