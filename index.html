@@ -14,30 +14,52 @@
   <body>
     <div class="background">
       <div class="clock-section flipped bottom-shadow" id="time1"></div>
+
       <div class="middle-section">
         <div id="pause">PAUSE</div>
 
         <i id="settings" class="fa fa-gear fa-3x"></i>
       </div>
+
       <div class="clock-section top-shadow" id="time2"></div>
 
       <div id="settings-menu">
         <h2>Settings</h2>
+
         <div class="settings-time">
-          <div>
-            <p>Hours</p>
-            <input id="newHour" type="number" min="0" />
-          </div>
-          <div>
-            <p>Minutes</p>
-            <input id="newMinute" type="number" min="0" />
-          </div>
-          <div>
-            <p>Seconds</p>
-            <input id="newSecond" type="number" min="0" />
+          <p>PLAYER TIME</p>
+          <div class="settings-time-input-field">
+            <div>
+              <input id="newHour" type="number" min="0" placeholder="Hours" />
+            </div>
+            <div>
+              <input
+                id="newMinute"
+                type="number"
+                min="0"
+                placeholder="Minutes"
+              />
+            </div>
+            <div>
+              <input
+                id="newSecond"
+                type="number"
+                min="0"
+                placeholder="Seconds"
+              />
+            </div>
           </div>
         </div>
-        <div class="settings-time">
+        <div>
+          <p>Low Time Alert</p>
+          <input
+            id="low-time-alert"
+            type="number"
+            min="0"
+            placeholder="minutes"
+          />
+        </div>
+        <div class="settings-btn-container">
           <button id="change-time-btn">Change</button>
           <button id="close-settings-btn">Close</button>
         </div>

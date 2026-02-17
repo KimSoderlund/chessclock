@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-weight: bold;
   font-size: 105%;
 }
@@ -20,8 +23,6 @@
   align-items: center;
   background-color: #e2e2e2;
   flex-grow: 10;
-  font-size: large;
-  width: 100vw;
   font-size: 400%;
   user-select: none;
 }
@@ -38,13 +39,18 @@
   box-shadow: inset 0px -1px 16px rgba(0, 0, 0, 0.705);
 }
 
-.player-1-active {
+.player-active {
   background-color: aqua;
   cursor: pointer;
 }
-.player-2-active {
+
+.player-active-alert {
   background-color: lightcoral;
   cursor: pointer;
+}
+
+.pause-active {
+  background-color: rgb(255, 255, 255);
 }
 
 .middle-section {
@@ -94,9 +100,8 @@
   width: 100vw;
   display: none;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
-  padding: 6rem;
 }
 
 #settings-menu input {
@@ -112,10 +117,20 @@
 
 .settings-time {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
+}
+.settings-time-input-field {
+  display: flex;
+  flex-direction: row;
+}
+.settings-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #settings-menu button {
@@ -123,6 +138,6 @@
   height: 3rem;
   font-size: medium;
   text-align: center;
-  margin-top: 1rem;
-  margin: 1rem;
+  margin: 5px;
+  cursor: pointer;
 }
