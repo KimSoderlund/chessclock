@@ -97,21 +97,26 @@ pauseButton.addEventListener("click", () => {
   renderering();
 });
 
+//Render colors Function
 const settingsMenuButton = document.getElementById("settings");
+const middleSection = document.getElementById("pause");
 function renderering() {
   if (player1.pause && player2.pause) {
     player1Section.classList.remove("player-active");
     player2Section.classList.remove("player-active");
     settingsMenuButton.classList.add("setting-button-active");
+    middleSection.classList.add("pause-active");
   }
   if (!player1.pause && player2.pause) {
     player1Section.classList.add("player-active");
     player2Section.classList.remove("player-active");
     settingsMenuButton.classList.remove("setting-button-active");
+    middleSection.classList.remove("pause-active");
   } else if (player1.pause && !player2.pause) {
     player1Section.classList.remove("player-active");
     player2Section.classList.add("player-active");
     settingsMenuButton.classList.remove("setting-button-active");
+    middleSection.classList.remove("pause-active");
   }
   if (
     player1Section.classList.contains("player-active") &&

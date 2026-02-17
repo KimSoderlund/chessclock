@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-weight: bold;
   font-size: 105%;
 }
@@ -20,8 +23,6 @@
   align-items: center;
   background-color: #e2e2e2;
   flex-grow: 10;
-  font-size: large;
-  width: 100vw;
   font-size: 400%;
   user-select: none;
 }
@@ -42,9 +43,14 @@
   background-color: aqua;
   cursor: pointer;
 }
+
 .player-active-alert {
   background-color: lightcoral;
   cursor: pointer;
+}
+
+.pause-active {
+  background-color: rgb(255, 255, 255);
 }
 
 .middle-section {
