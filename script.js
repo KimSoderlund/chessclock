@@ -112,7 +112,8 @@ function renderering() {
   }
   if (
     player1Section.classList.contains("player-active") &&
-    player1.minute < 15
+    player1.minute < 15 &&
+    player1.hour === 0
   ) {
     player1Section.classList.add("player-active-alert");
   } else {
@@ -120,7 +121,8 @@ function renderering() {
   }
   if (
     player2Section.classList.contains("player-active") &&
-    player2.minute < 15
+    player2.minute < 15 &&
+    player2.hour === 0
   ) {
     player2Section.classList.add("player-active-alert");
   } else {
