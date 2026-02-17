@@ -138,7 +138,6 @@ function renderering() {
 //display settings menu when settings button is clicked
 const settingsMenu = document.getElementById("settings-menu");
 settingsMenuButton.addEventListener("click", () => {
-  console.log("settings menu button clicked");
   settingsMenu.classList.add("settings-menu-active");
 });
 
@@ -178,7 +177,6 @@ changeTimeButton.addEventListener("click", () => {
   } else {
     lowTimeAlert = lowTimeInput.value;
   }
-  console.log("low time alert value: " + lowTimeAlert);
 });
 
 renderering();
