@@ -173,7 +173,12 @@ changeTimeButton.addEventListener("click", () => {
   player2.hour = newHour;
   player2.minute = newMinute;
   player2.second = newSecond;
-  lowTimeAlert = lowTimeInput.value;
+  if (lowTimeInput.value === "") {
+    lowTimeAlert = lowTimeAlert;
+  } else {
+    lowTimeAlert = lowTimeInput.value;
+  }
+  console.log("low time alert value: " + lowTimeAlert);
 });
 
 renderering();
